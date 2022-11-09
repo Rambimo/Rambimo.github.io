@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+}
+
+html{
+    font-family: 'inter', 'Times New Roman', Times, serif;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(bgroti.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    color: #fff;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    overflow: scroll;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.to-top {
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    border-radius: 10px;
+    background: linear-gradient(rgb(237, 195, 118), orange);
+    cursor: pointer;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.to-top.show{
+    bottom: 30px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.to-top i {
+    padding: 12px;
+    color: #000;
+}
+
+.Links{
+    display: flex;
+    align-items: baseline;
+}
+
+.Links .dropdown{
+    position: relative;
+}
+
+.Links .dropdown:hover .dropdown-content{
+    display: block;
+} 
+
+.Links .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    /* margin-top: 20px; */
+}
+
+.Links .dropdown-content .dropdown-option{
+    display: flex;
+}
+
+.Links .dropdown-content .dropdown-option a{
+    height: 100%;
+    width: 100%;
+    margin: 0!important;
+    padding: 15px 20px;
+    color: #000;
+}
+
+.Links .dropdown-content .dropdown-option a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.nav{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    opacity: .8;
+    border-bottom: 1px solid;
+    z-index: -1;
+    transition: 1s;
+}
+
+nav .bg.show{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: orange;
+    margin: 5px;
+}
+
+.nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .container span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav .container a{
+    margin: 0 20px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+#home{
+    position: relative;
+    height: 100vh;
+}
+
+#home .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .container h1{
+    text-align: center;
+    font-size: 150px;
+    margin-bottom: 220px;
+}
+
+#produk .container div{
+    position: relative;
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#produk .container div p{
+    width: 40%;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px 0;
+    font-size: 12px;
+    border-top: 1px solid #414040;
+}
+
+.footer span {
+    text-decoration: underline;
+}
+
+.modal-box{
+    z-index: 1000;
+    background-color: #000000c8;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box .modal{
+    background-color: #fff;
+    width: 85%;
+    height: 90%;
+    position: relative;
+    color: #000;
+}
+
+.card-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-card{
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: orange;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.card-img{
+    margin-right: 20px;
+}
